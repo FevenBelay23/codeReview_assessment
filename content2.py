@@ -1,20 +1,20 @@
 def is_valid_parenthesis(s):
-    dc = {
+    dicit = {
         '(': ')',
           "{": "}",
          '[': ']'
 
     }
     stack = []
-    for i in s:
-        if i in dc.keys(): stack.append(i)
+    for i in stack:
+        if i in dicit.keys(): stack.append(i)
         else:
             if len(stack) == 0:
                 return False
             
 
             op = stack.pop()
-            if dc[op] != i:
+            if dicit[op] != i:
                 return False
     if len(stack) != 0:
         return False
